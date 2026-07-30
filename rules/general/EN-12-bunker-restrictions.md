@@ -18,4 +18,4 @@ Players may not place any traps inside the bunker.
 
 For building restrictions around the bunker, see:
 
-**BUILD-01 Bunker Build Restrictions**
+**BUILD-01 no build zones**
