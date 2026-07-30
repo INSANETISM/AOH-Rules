@@ -1,0 +1,38 @@
+[
+    {
+        "id": "general",
+        "name": "General Rules",
+        "icon": "🛡",
+        "description": "Server rules, behaviour, exploits and punishments."
+    },
+    {
+        "id": "raid",
+        "name": "Raid Rules",
+        "icon": "💥",
+        "description": "Raiding, C4, breaching and raid weekends."
+    },
+    {
+        "id": "build",
+        "name": "Build Rules",
+        "icon": "🏗",
+        "description": "Base building, territories and placement."
+    },
+    {
+        "id": "trader",
+        "name": "Trader Rules",
+        "icon": "💰",
+        "description": "Safezone, trader etiquette and restrictions."
+    },
+    {
+        "id": "conquest",
+        "name": "Conquest Rules",
+        "icon": "⚔",
+        "description": "Conquest objectives, points and rewards."
+    },
+    {
+        "id": "krsnik",
+        "name": "Krsnik Airfield",
+        "icon": "✈",
+        "description": "Airfield event rules and restrictions."
+    }
+]
