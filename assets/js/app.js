@@ -1,31 +1,72 @@
-/* =====================================
-   Ashes of Humanity Rules Portal
-   app.js
-===================================== */
+document.addEventListener("DOMContentLoaded", async () => {
 
-document.addEventListener("DOMContentLoaded", () => {
-
-    console.log("Ashes of Humanity Rules Portal Loaded");
+    await loadCategories();
 
     initialiseNavigation();
-    initialiseCards();
+
     initialiseSearch();
 
 });
 
-/* =====================================
-    Navigation
-===================================== */
+async function loadCategories() {
+
+    const response = await fetch("data/categories.json");
+
+    const categories = await response.json();
+
+    const grid = document.getElementById("categoryGrid");
+
+    grid.innerHTML = "";
+
+    categories.forEach(category => {
+
+        grid.innerHTML += `
+
+        <div class="card" data-category="${category.id}">
+
+            <h3>${category.icon} ${category.name}</h3>
+
+            <p>${category.description}</p>
+
+            <button>
+
+                View Rules →
+
+            </button>
+
+        </div>
+
+        `;
+
+    });
+
+    document.querySelectorAll(".card button").forEach(button=>{
+
+        button.addEventListener("click",(e)=>{
+
+            const card=e.target.closest(".card");
+
+            const category=card.dataset.category;
+
+            alert(category + " page coming next.");
+
+        });
+
+    });
+
+}
 
 function initialiseNavigation(){
 
-    const navItems = document.querySelectorAll(".nav-item");
-
-    navItems.forEach(item=>{
+    document.querySelectorAll(".nav-item").forEach(item=>{
 
         item.addEventListener("click",()=>{
 
-            navItems.forEach(i=>i.classList.remove("active"));
+            document.querySelectorAll(".nav-item").forEach(i=>{
+
+                i.classList.remove("active");
+
+            });
 
             item.classList.add("active");
 
@@ -35,102 +76,26 @@ function initialiseNavigation(){
 
 }
 
-/* =====================================
-    Category Cards
-===================================== */
-
-function initialiseCards(){
-
-    const cards=document.querySelectorAll(".card");
-
-    cards.forEach(card=>{
-
-        card.addEventListener("mouseenter",()=>{
-
-            card.style.transform="translateY(-8px)";
-
-        });
-
-        card.addEventListener("mouseleave",()=>{
-
-            card.style.transform="translateY(0px)";
-
-        });
-
-        card.querySelector("button").addEventListener("click",()=>{
-
-            const title=card.querySelector("h3").innerText;
-
-            alert(title + "\n\nRule pages are coming in the next release.");
-
-        });
-
-    });
-
-}
-
-/* =====================================
-    Search
-===================================== */
-
 function initialiseSearch(){
 
-    const input=document.getElementById("search");
+    const search=document.getElementById("search");
 
-    input.addEventListener("input",(e)=>{
+    search.addEventListener("input",()=>{
 
-        const value=e.target.value.toLowerCase();
+        const value=search.value.toLowerCase();
 
-        const cards=document.querySelectorAll(".card");
+        document.querySelectorAll(".card").forEach(card=>{
 
-        cards.forEach(card=>{
+            card.style.display=
 
-            const text=card.innerText.toLowerCase();
+            card.innerText.toLowerCase().includes(value)
 
-            if(text.includes(value)){
+            ? "block"
 
-                card.style.display="block";
-
-            }
-
-            else{
-
-                card.style.display="none";
-
-            }
+            : "none";
 
         });
 
     });
 
 }
-
-/* =====================================
-    Future Modules
-===================================== */
-
-/*
-
-Upcoming releases
-
-✔ Markdown Loader
-
-✔ JSON Rule Database
-
-✔ Live Search Index
-
-✔ Rule Viewer
-
-✔ Related Rules
-
-✔ Version History
-
-✔ Recent Updates
-
-✔ Breadcrumbs
-
-✔ Mobile Drawer
-
-✔ Theme Manager
-
-*/
