@@ -18,9 +18,7 @@ Faction membership and participation are controlled during Conquest events.
 
 Faction sizes are locked every:
 
-**Wednesday at 9:00PM EST**
-
-before raid weekend begins.
+**Wednesday at 9:00PM EST** before raid weekend begins.
 
 ---
 
@@ -57,8 +55,6 @@ Defending with players outside your registered faction will result in fines.
 
 A faction may only raid factions up to:
 
-**4 members smaller than their own faction**
-
-for Conquest rewards.
+**4 members smaller than their own faction** for Conquest rewards.
 
 If a faction attacks a group outside this requirement, their captured flag will have no value.
