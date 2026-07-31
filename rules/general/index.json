@@ -2,20 +2,20 @@
   {
     "id": "GEN-01",
     "title": "KOS / PVP Server",
-    "file": "GEN-01-kos-pvp-server.md",
+    "file": "GEN-01-KOS.md",
     "description": "Ashes of Humanity is a PvP server with KOS enabled."
   },
   {
     "id": "GEN-02",
     "title": "Gamertag Linking Required",
-    "file": "GEN-02-gamertag-linking-required.md",
-    "description": "All players must link their gamertag to access the server."
+    "file": "GEN-02-gamertag-linking.md",
+    "description": "All players must link their gamertag to play on the server."
   },
   {
     "id": "GEN-03",
     "title": "Alt Accounts",
     "file": "GEN-03-alt-accounts.md",
-    "description": "Rules regarding main accounts and alternate accounts."
+    "description": "Rules regarding main and alternate accounts."
   },
   {
     "id": "GEN-04",
@@ -27,7 +27,7 @@
     "id": "GEN-05",
     "title": "Bunker & Container Logging",
     "file": "GEN-05-bunker-container-logging.md",
-    "description": "Logging out inside bunkers or storage containers is prohibited."
+    "description": "Logging out inside bunkers or storage containers is forbidden."
   },
   {
     "id": "GEN-06",
@@ -39,12 +39,12 @@
     "id": "GEN-07",
     "title": "Exploits",
     "file": "GEN-07-exploits.md",
-    "description": "Use of game exploits is not allowed."
+    "description": "The use of game exploits is not allowed."
   },
   {
     "id": "GEN-08",
-    "title": "Base Info",
-    "file": "GEN-08-base-info.md",
+    "title": "Base Information",
+    "file": "GEN-08-base-information.md",
     "description": "Insiding and leaking base information rules."
   },
   {
@@ -57,13 +57,13 @@
     "id": "GEN-10",
     "title": "Faction Rules",
     "file": "GEN-10-faction-rules.md",
-    "description": "General faction requirements and restrictions."
+    "description": "Faction requirements and restrictions."
   },
   {
     "id": "GEN-11",
     "title": "Enemy Base Logging",
-    "file": "GEN-11-enemy-base-logging.md",
-    "description": "Players may not log out inside enemy bases."
+    "file": "GEN-11-base-logging.md",
+    "description": "Logging out inside enemy bases is not allowed."
   },
   {
     "id": "GEN-12",
