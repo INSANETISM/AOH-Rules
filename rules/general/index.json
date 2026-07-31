@@ -1,0 +1,74 @@
+[
+  {
+    "id": "GEN-01",
+    "title": "KOS / PVP Server",
+    "file": "GEN-01-kos-pvp-server.md",
+    "description": "Ashes of Humanity is a PvP server with KOS enabled."
+  },
+  {
+    "id": "GEN-02",
+    "title": "Gamertag Linking Required",
+    "file": "GEN-02-gamertag-linking-required.md",
+    "description": "All players must link their gamertag to access the server."
+  },
+  {
+    "id": "GEN-03",
+    "title": "Alt Accounts",
+    "file": "GEN-03-alt-accounts.md",
+    "description": "Rules regarding main accounts and alternate accounts."
+  },
+  {
+    "id": "GEN-04",
+    "title": "Combat Logging",
+    "file": "GEN-04-combat-logging.md",
+    "description": "Combat logging is strictly forbidden."
+  },
+  {
+    "id": "GEN-05",
+    "title": "Bunker & Container Logging",
+    "file": "GEN-05-bunker-container-logging.md",
+    "description": "Logging out inside bunkers or storage containers is prohibited."
+  },
+  {
+    "id": "GEN-06",
+    "title": "Base Camping",
+    "file": "GEN-06-base-camping.md",
+    "description": "Rules regarding excessive base camping."
+  },
+  {
+    "id": "GEN-07",
+    "title": "Exploits",
+    "file": "GEN-07-exploits.md",
+    "description": "Use of game exploits is not allowed."
+  },
+  {
+    "id": "GEN-08",
+    "title": "Base Info",
+    "file": "GEN-08-base-info.md",
+    "description": "Insiding and leaking base information rules."
+  },
+  {
+    "id": "GEN-09",
+    "title": "Faction Requirements",
+    "file": "GEN-09-faction-requirements.md",
+    "description": "Requirements for creating factions."
+  },
+  {
+    "id": "GEN-10",
+    "title": "Faction Rules",
+    "file": "GEN-10-faction-rules.md",
+    "description": "General faction requirements and restrictions."
+  },
+  {
+    "id": "GEN-11",
+    "title": "Enemy Base Logging",
+    "file": "GEN-11-enemy-base-logging.md",
+    "description": "Players may not log out inside enemy bases."
+  },
+  {
+    "id": "GEN-12",
+    "title": "Bunker Restrictions",
+    "file": "GEN-12-bunker-restrictions.md",
+    "description": "Restrictions regarding bunker trapping."
+  }
+]
