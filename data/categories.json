@@ -1,33 +1,38 @@
 [
-    {
-        "id": "general",
-        "name": "General Rules",
-        "icon": "🛡",
-        "description": "Server rules, behaviour, exploits and punishments."
-    },
-    {
-        "id": "raid",
-        "name": "Raid Rules",
-        "icon": "💥",
-        "description": "Raiding, C4, breaching and raid weekends."
-    },
-    {
-        "id": "build",
-        "name": "Build Rules",
-        "icon": "🏗",
-        "description": "Base building, territories and placement."
-    },
-    {
-        "id": "trader",
-        "name": "Trader Rules",
-        "icon": "💰",
-        "description": "Safezone, trader etiquette and restrictions."
-    },
-    {
-        "id": "conquest",
-        "name": "Conquest Rules",
-        "icon": "⚔",
-        "description": "Conquest objectives, points and rewards."
-   
-    }
+  {
+    "id": "general",
+    "name": "General Rules",
+    "icon": "🛡",
+    "description": "Core server rules and player conduct."
+  },
+  {
+    "id": "raid",
+    "name": "Raid Rules",
+    "icon": "💥",
+    "description": "Base raiding and raid weekend rules."
+  },
+  {
+    "id": "build",
+    "name": "Build Rules",
+    "icon": "🏗",
+    "description": "Base building and placement rules."
+  },
+  {
+    "id": "trader",
+    "name": "Trader Rules",
+    "icon": "💰",
+    "description": "Safezone and trader rules."
+  },
+  {
+    "id": "bounty",
+    "name": "Bounty Rules",
+    "icon": "🎯",
+    "description": "Bounty system rules."
+  },
+  {
+    "id": "conquest",
+    "name": "Conquest Rules",
+    "icon": "🏆",
+    "description": "Faction competition and conquest rules."
+  }
 ]
