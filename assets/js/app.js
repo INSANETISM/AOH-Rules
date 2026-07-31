@@ -1,12 +1,16 @@
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener("DOMContentLoaded", () => {
 
-    await loadCategories();
+    loadCategories();
 
     initialiseNavigation();
 
     initialiseSearch();
 
 });
+
+
+let allCards = [];
+
 
 async function loadCategories() {
 
@@ -28,7 +32,7 @@ async function loadCategories() {
 
             <p>${category.description}</p>
 
-            <button>
+            <button class="open-category">
 
                 View Rules →
 
@@ -40,62 +44,198 @@ async function loadCategories() {
 
     });
 
-    document.querySelectorAll(".card button").forEach(button=>{
 
-        button.addEventListener("click",(e)=>{
+    allCards = document.querySelectorAll(".card");
 
-            const card=e.target.closest(".card");
 
-            const category=card.dataset.category;
+    document.querySelectorAll(".open-category")
+    .forEach(button => {
 
-            alert(category + " page coming next.");
+
+        button.addEventListener("click", () => {
+
+
+            const card = button.closest(".card");
+
+            const category = card.dataset.category;
+
+
+            loadRules(category);
+
 
         });
 
+
     });
+
 
 }
 
-function initialiseNavigation(){
 
-    document.querySelectorAll(".nav-item").forEach(item=>{
 
-        item.addEventListener("click",()=>{
+async function loadRules(category) {
 
-            document.querySelectorAll(".nav-item").forEach(i=>{
+
+    const grid = document.getElementById("categoryGrid");
+
+
+    const response = await fetch(
+        `rules/${category}/index.json`
+    );
+
+
+    const rules = await response.json();
+
+
+    grid.innerHTML = "";
+
+
+    rules.forEach(rule => {
+
+
+        grid.innerHTML += `
+
+
+        <div class="card">
+
+
+            <h3>
+                ${rule.id} - ${rule.title}
+            </h3>
+
+
+            <p>
+                ${rule.description || ""}
+            </p>
+
+
+            <button
+            onclick="openRule('${category}','${rule.file}')">
+
+                Read Rule →
+
+            </button>
+
+
+        </div>
+
+
+        `;
+
+
+    });
+
+
+}
+
+
+
+async function openRule(category, file) {
+
+
+    const response = await fetch(
+        `rules/${category}/${file}`
+    );
+
+
+    const markdown = await response.text();
+
+
+    const grid = document.getElementById("categoryGrid");
+
+
+    grid.innerHTML = `
+
+
+    <div class="rule-content">
+
+
+        <button onclick="loadRules('${category}')">
+
+            ← Back
+
+        </button>
+
+
+        <pre>
+
+${markdown}
+
+        </pre>
+
+
+    </div>
+
+
+    `;
+
+
+}
+
+
+
+function initialiseNavigation() {
+
+
+    document.querySelectorAll(".nav-item")
+    .forEach(item => {
+
+
+        item.addEventListener("click", () => {
+
+
+            document.querySelectorAll(".nav-item")
+            .forEach(i => {
 
                 i.classList.remove("active");
 
             });
 
+
             item.classList.add("active");
+
 
         });
 
+
     });
+
 
 }
 
-function initialiseSearch(){
 
-    const search=document.getElementById("search");
 
-    search.addEventListener("input",()=>{
+function initialiseSearch() {
 
-        const value=search.value.toLowerCase();
 
-        document.querySelectorAll(".card").forEach(card=>{
+    const search =
+    document.getElementById("search");
 
-            card.style.display=
 
-            card.innerText.toLowerCase().includes(value)
+    search.addEventListener("input", () => {
+
+
+        const value =
+        search.value.toLowerCase();
+
+
+        allCards.forEach(card => {
+
+
+            card.style.display =
+            card.innerText
+            .toLowerCase()
+            .includes(value)
 
             ? "block"
 
             : "none";
 
+
         });
 
+
     });
+
 
 }
