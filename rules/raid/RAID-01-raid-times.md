@@ -49,3 +49,7 @@ To receive points for capturing an enemy faction flag:
 A faction may only receive conquest points for captured faction flags **every other raid weekend**.
 
 Each faction flag capture is subject to conquest rules.
+
+See:
+
+CONQUEST-03 Flag Rules
