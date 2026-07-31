@@ -2,13 +2,13 @@
   {
     "id": "GEN-01",
     "title": "KOS / PVP Server",
-    "file": "GEN-01-KOS.md",
+    "file": "GEN-01-KOS.txt",
     "description": "Ashes of Humanity is a PvP server with KOS enabled."
   },
   {
     "id": "GEN-02",
     "title": "Gamertag Linking Required",
-    "file": "GEN-02-gamertag-linking.md",
+    "file": "GEN-02-gamertag-linking.txt",
     "description": "All players must link their gamertag to play on the server."
   },
   {
